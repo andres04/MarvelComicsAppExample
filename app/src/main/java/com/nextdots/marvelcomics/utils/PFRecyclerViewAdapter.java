@@ -109,7 +109,6 @@ public abstract class PFRecyclerViewAdapter<T> extends RecyclerView.Adapter<PFRe
 
     public void setList(List<T> list) {
         mList = list;
-        mListAux = new ArrayList<>(mList);
     }
 
     public List<T> getList() {

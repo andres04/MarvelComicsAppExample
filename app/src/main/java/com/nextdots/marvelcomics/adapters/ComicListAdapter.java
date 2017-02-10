@@ -76,4 +76,8 @@ public class ComicListAdapter extends PFRecyclerViewAdapter<Result> {
         }
         notifyDataSetChanged();
     }
+
+    public void updateAuxList() {
+        mListAux = new ArrayList<>(getList());
+    }
 }

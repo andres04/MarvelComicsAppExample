@@ -235,6 +235,7 @@ public class ComicListFragment extends BaseFragment implements Callback<ComicsRe
 
     private void loadComics() {
         Collections.shuffle(results);
+        comicListAdapter.updateAuxList();
         comicListAdapter.notifyDataSetChanged();
     }
 
