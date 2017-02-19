@@ -14,8 +14,6 @@ import com.nextdots.marvelcomics.di.component.AppComponent;
  */
 public abstract class BaseActivity extends AppCompatActivity {
 
-    protected Gson gson = new Gson();
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

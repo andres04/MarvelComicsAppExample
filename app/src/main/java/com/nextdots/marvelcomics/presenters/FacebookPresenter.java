@@ -1,4 +1,4 @@
-package com.nextdots.marvelcomics.utils;
+package com.nextdots.marvelcomics.presenters;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,21 +10,23 @@ import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
+import com.nextdots.marvelcomics.messages.FacebookMessage;
 import com.nextdots.marvelcomics.rest.entity.Perfil;
+import com.nextdots.marvelcomics.utils.Constants;
+import com.nextdots.marvelcomics.utils.Util;
 
+import org.greenrobot.eventbus.EventBus;
 import org.json.JSONObject;
 
 import java.util.Arrays;
 
 
 
-public class FacebookProvider {
+public class FacebookPresenter {
 
     private CallbackManager mCallbackManager;
-    private OnLoginSocialNetwork mListener;
 
-    public FacebookProvider(OnLoginSocialNetwork listener){
-        mListener = listener;
+    public FacebookPresenter(){
         buildCallBackManager();
     }
 
@@ -39,12 +41,12 @@ public class FacebookProvider {
 
             @Override
             public void onCancel() {
-
+                EventBus.getDefault().post(new FacebookMessage(FacebookMessage.ON_CANCEL, null, null));
             }
 
             @Override
             public void onError(FacebookException error) {
-
+                EventBus.getDefault().post(new FacebookMessage(FacebookMessage.ON_ERROR, null, error));
             }
         });
     }
@@ -63,8 +65,7 @@ public class FacebookProvider {
                 perfil.setTipoSocialNetwork(Constants.FACEBOOK);
                 perfil.setSocialNetwork(true);
                 perfil.setImg(Util.getUrlProfileFacebook(perfil.getId()));
-
-                mListener.onSuccess(perfil);
+                EventBus.getDefault().post(new FacebookMessage(FacebookMessage.ON_SUCCESS, perfil, null));
             }
         });
 

@@ -16,6 +16,7 @@ public class Constants {
     public static final int LIMIT = 30;
     public static final String ID_COMIC = "idComic";
     public static final String COMICS_LIST_RESULT_ITEM = "idComics";
+    public static final String OFFLINE = "offline";
 
     public static final String COMIC_LIST_DATA = "comicListData";
     public static final String COMIC_DATA = "comicData";

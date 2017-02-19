@@ -5,6 +5,9 @@ import android.content.SharedPreferences;
 
 import com.nextdots.marvelcomics.application.App;
 import com.nextdots.marvelcomics.application.AppPreferences;
+import com.nextdots.marvelcomics.fragments.SplashFragment;
+import com.nextdots.marvelcomics.presenters.ComicListPresenter;
+import com.nextdots.marvelcomics.presenters.DetalleComicPresenter;
 
 import javax.inject.Singleton;
 
@@ -18,6 +21,7 @@ public class AppModule {
 
     public AppModule(App mApplication) {
         this.mApplication = mApplication;
+
     }
 
     @Provides
@@ -39,4 +43,17 @@ public class AppModule {
     AppPreferences provideAppPreferences(SharedPreferences preferences){
         return new AppPreferences(preferences);
     }
+
+    @Provides
+    @Singleton
+    ComicListPresenter provideComicListPresenter(){
+        return new ComicListPresenter(mApplication.getAppComponent());
+    }
+
+    @Provides
+    @Singleton
+    DetalleComicPresenter provideDetalleComicPrestenter(){
+        return new DetalleComicPresenter(mApplication.getAppComponent());
+    }
+
 }

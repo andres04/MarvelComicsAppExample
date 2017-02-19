@@ -37,6 +37,7 @@ dependencies {
     compile 'com.facebook.android:facebook-android-sdk:4.14.1'
     compile 'com.android.support:recyclerview-v7:25.1.1'
     compile 'com.github.medyo:dynamicbox:1.2@aar'
+    compile 'org.greenrobot:eventbus:3.0.0'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.7'

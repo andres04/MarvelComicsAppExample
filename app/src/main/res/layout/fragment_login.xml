@@ -2,10 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/rl_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.nextdots.marvelcomics.activities.LoginActivity"
+    tools:context="com.nextdots.marvelcomics.activities.MainActivity"
     android:gravity="center"
     android:background="@android:color/black">
 

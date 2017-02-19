@@ -13,8 +13,6 @@ import com.nextdots.marvelcomics.di.component.AppComponent;
  */
 public abstract class BaseFragment extends Fragment {
 
-    protected Gson gson = new Gson();
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

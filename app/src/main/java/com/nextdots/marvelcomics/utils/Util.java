@@ -76,6 +76,12 @@ public class Util {
         }
     }
 
+    private static Gson gson = new Gson();
+
+    public static Gson getGson(){
+        return gson;
+    }
+
     public static String convertUrl(String url){
 
         if (!url.startsWith("https://") && !url.startsWith("http://")){

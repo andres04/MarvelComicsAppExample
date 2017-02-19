@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:fitsSystemWindows="true"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.nextdots.marvelcomics.activities.DetalleComicActivity"
-    tools:showIn="@layout/activity_detalle_comic">
+    tools:context="com.nextdots.marvelcomics.activities.MainActivity"
+    tools:showIn="@layout/fragment_detalle_comic">
 
     <LinearLayout
         android:layout_width="match_parent"
