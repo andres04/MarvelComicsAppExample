@@ -43,10 +43,10 @@ Built With:
 * Eventbus 3.0.0
 * Android Appcompat, Support Library, Design Library and RecyclerView v4:25.1.1
 
-Author
+##Author
 
 Andrés Escobar - Main developer.
 
-License
+##License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details
